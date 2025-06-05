@@ -4,3 +4,5 @@ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 {
 
 }
+
+console.log('Hello World')
