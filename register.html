@@ -9,30 +9,33 @@
 </head>
 
 <body>
-    <header>The Wonders of Sri Lankan Food</header>
+    <header role="banner" aria-label="Site Header">The Wonders of Sri Lankan Food</header>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="recipes.html">Recipes</a></li>
-            <li><a href="register.html" class="active">Newsletter</a></li>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <ul role="menubar" aria-label="Main menu">
+            <li role="none"><a href="index.html" role="menuitem" aria-label="Home page">Home</a></li>
+            <li role="none"><a href="recipes.html" role="menuitem" aria-label="View Sri Lankan recipes">Recipes</a></li>
+            <li role="none"><a href="register.html" class="active" role="menuitem" aria-current="page"
+                    aria-label="Newsletter">Newsletter</a></li>
         </ul>
     </nav>
 
-    <div class="banner">
+    <div class="banner" role="banner" aria-label="Hero Banner">
         <img src="../images/srilankasunset.png" alt="A picture of a Sri Lankan Sunset">
         <div class="banner-overlay">
-            <div class="banner-text">
+            <div class="banner-text" aria-label="Banner Description">
                 <h1>The Wonders of Sri Lankan Food</h1>
             </div>
         </div>
     </div>
 
-    <h1>Sign up for our newsletter.</h1>
-    <p>By signing up to our newsletter you will be notified about upcoming Sri Lankan recipes.</p> <br><br>
-    <p>A new recipe
-        will be posted every week!</p>
-    <form id="registrationForm">
+    <div class="signUptext">
+        <h1>Sign up for our newsletter.</h1>
+        <p>By signing up to our newsletter you will be notified about upcoming Sri Lankan recipes.</p> <br><br>
+        <p>A new recipe
+            will be posted every week!</p>
+    </div>
+    <form aria-label="Newsletter Signup Form">
 
         <!-- THIS SECTION MAKES SURE A VALID FIRST NAME IS ENTERED -->
         <label for="firstName">First Name:</label><br>
@@ -65,14 +68,15 @@
         <input type="password" required><br><br>
 
         <!-- THE SUBMIT BUTTON FOR THE FORM -->
-        <input type="submit" id="submit" name="submit" value="Submit"><br><br>
+        <button type="submit" aria-label="Submit newsletter signup" name="submit" value="Submit">Sign
+            Up</button><br><br>
 
 
     </form>
 
     <script src="script.js"></script> <!-- Linking the script.js file -->
 
-    <footer>
+    <footer role="contentinfo" aria-label="Page Footer" style="color: white; text-align: center;">
         Shamal Madawana Liyana Hettiarachchige<br>
         Assessment 3 Due Date: 29th May 2025
     </footer>
