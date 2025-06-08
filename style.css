@@ -246,39 +246,8 @@ h1 {
     margin: 0;
     padding: 0;
     width: 130px;
-    position: absolute;
-    top: 2300px;
-    left: 24%;
+    text-align: center;
 }
-
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 12px;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: #416643;
-}
-
-ol {
-    list-style-type: upper-roman;
-    list-style-position: outside;
-    text-align: justify;
-    width: 80%;
-}
-
-ul {
-    text-align: left;
-}
-
 
 .recipe-steps-table.condensed td {
     background: transparent;
@@ -291,27 +260,57 @@ ul {
     /* Evenly distribute columns */
 }
 
+
+
 /* This section styles the recipe steps table along with all of the child header and data */
-.recipe-steps-table th:nth-child(1),
-.recipe-steps-table td:nth-child(1) {
-    width: 17%;
-    background-color: #005A5A;
-
+.recipe-header {
+    color: red;
 }
 
-.recipe-steps-table th:nth-child(2),
-.recipe-steps-table td:nth-child(2) {
-    width: 35%;
-    background-color: #D65c00;
-}
-
-.recipe-steps-table th:nth-child(3),
-.recipe-steps-table td:nth-child(3) {
-    width: 50%;
-    background-color: #8B2635;
+.recipe-details {
+    background-color: rebeccapurple;
 }
 
 /* END OF RECIPE STEPS TABLE STYLING */
+
+
+/* Adjusts the styling of the recipe name listing for the lamprais section */
+button {
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    width: 130px;
+}
+
+button:hover {
+    background-color: #416643;
+}
+
+/* End of lamprais section that contains sub-recipes */
+
+
+/* STYLES ANY ORDERED AND UNORDERED LIST */
+ol {
+    list-style-type: upper-roman;
+    list-style-position: outside;
+    text-align: justify;
+    width: 80%;
+}
+
+ul {
+    text-align: left;
+}
+
+/* END OF ORDERED AND UNORDERED LIST STYLING */
+
+
+
 
 /* THIS SECTION CONTROLS THE RECIPE BREAKDOWN TABLE BACKGROUND COLOUR, HEADINGS AND DATA */
 .recipe-summary-table.condensed {
@@ -324,6 +323,8 @@ ul {
     min-width: 600px;
     box-sizing: border-box;
     display: table;
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 .recipe-summary-table.condensed th,
@@ -343,6 +344,9 @@ ul {
 }
 
 /* END OF RECIPE SUMMARY / QUICKVIEW TABLE STYLING */
+
+
+
 
 @media (max-width: 900px) {
 
@@ -419,10 +423,6 @@ ul {
 
 
 /* THIS IS MY NOTE ON MEAL PREP FOR LAMPRAIS */
-.riceDish {
-    width: 912px;
-    height: 9000px;
-}
 
 .lamprais-tip {
     position: absolute;
@@ -467,7 +467,6 @@ ul {
 #kottu>p,
 .recipe-section>p {
     margin-left: 0px;
-    max-width: 500px;
     text-align: justify;
 
 }
@@ -517,3 +516,132 @@ h2 {
 }
 
 /* END OF BRITANNICA LINK */
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #c47104;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+input {
+    height: 15px;
+    padding: 12px 20px;
+    background-color: rgb(226, 177, 43);
+    color: #000000;
+}
+
+.input-icon {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.input-icon i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #bdbdbd;
+    font-size: 1.1em;
+    pointer-events: none;
+}
+
+.input-icon input {
+    background: #333333;
+    color: #ffffff;
+    border: 2px solid #666666;
+    padding-left: 40px;
+    /* Make space for icon */
+    height: 2.2em;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-icon input::placeholder {
+    color: #bdbdbd;
+    opacity: 1;
+}
+
+#registrationForm label {
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 0.1em;
+    display: block;
+}
+
+#registrationForm input[type="submit"] {
+    margin-left: 0;
+    margin-top: 1em;
+    height: 2.2em;
+    font-size: 1em;
+    padding: 0 1.5em;
+    border-radius: 4px;
+    background-color: #388E3C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#registrationForm input[type="submit"]:hover {
+    background-color: #256029;
+}
+
+form {
+    background: #d17b30;
+    padding: 1em;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.recipe-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    margin: 10px 0;
+    border-radius: 10px;
+    font-size: 1.2em;
+    transition: 0.3s;
+    cursor: pointer;
+    display: block;
+}
+
+.recipe-btn.active-recipe {
+    background-color: #ffd700;
+    color: #333;
+    font-weight: bold;
+    border: 2px solid #d9b300;
+    box-shadow: 0 0 10px #ffd700;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 1.2em;
+    color: #333;
+    background: #ffd700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    width: fit-content;
+    box-shadow: 0 1px 8px #ffd70044;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #4caf50;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: 2px solid #fff;
+}
