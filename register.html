@@ -59,8 +59,9 @@
         <label for="emailAddress">Email address:</label>
         <div class="input-icon">
             <i class="fa fa-envelope"></i>
-            <input type="email" id="emailAddress" name="emailAddress" placeholder="Please enter a valid email"
-                title="Please enter a valid email address (e.g., example@domain.com)" required>
+            <input type="email" id="emailAddress" name="emailAddress" required />
+            <span id="errorMessage" style="color: red;"></span>
+            <button onclick="validateEmail()">Check Email</button>
         </div>
 
         <label for="mobileNumber">Mobile number:</label>
@@ -98,4 +99,17 @@
 
 </body>
 
+<script>
+    function validateEmail() {
+        const email = document.getElementById('emailAddress').value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const errorMessageElement = document.getElementById('errorMessage');
+        
+        if (!emailPattern.test(email)) {
+            errorMessageElement.textContent = "Please enter a valid email address.";
+        } else {
+            errorMessageElement.textContent = "";
+        }
+    }
+    </script>
 </html>
